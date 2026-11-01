@@ -1,0 +1,38 @@
+/* loader animation */
+  .loader {
+    height: 25px;
+    aspect-ratio: 5;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    grid-area: 1/1;
+    background:
+      no-repeat radial-gradient(farthest-side, #ff0015 94%, #0000) left,
+      no-repeat radial-gradient(farthest-side, #0051ff 94%, #0000) right;
+    background-size: 20% 100%;
+    animation: l32 2s infinite;
+  }
+  .loader:after {
+    background:
+      no-repeat radial-gradient(farthest-side, #eeff00 94%, #0000) calc(1 * 100% / 3),
+      no-repeat radial-gradient(farthest-side, #00ff99 94%, #0000) calc(2 * 100% / 3);
+    background-size: 20% 100%;
+    animation-direction: reverse;
+  }
+  /* Keyframes for two half-rotations with pause */
+  @keyframes l32 {
+    0%   { transform: rotate(0turn); }
+    25%  { transform: rotate(0.5turn); }   /* 180° */
+    50%  { transform: rotate(0.5turn); }   /* pause */
+    75%  { transform: rotate(1turn); }     /* another 180° */
+    100% { transform: rotate(1turn); }     /* pause again */
+  }
+
+/* more loaders 
+https://css-loaders.com/square/ 
+https://css-loaders.com/square-circle/
+https://css-loaders.com/line/
+https://css-loaders.com/thin/
+https://css-loaders.com/clones/ */

@@ -1,0 +1,18 @@
+.interactive-card {
+  width: 320px;
+  height: 200px;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.3s ease;
+  perspective: 1000px;
+  will-change: transform, box-shadow;
+  border: 2px solid transparent;
+}
+
+/* Colorful border when hovered */
+.interactive-card:hover {
+  border-image: linear-gradient(90deg, #e63946, #f1fa8c, #2a9d8f, #457b9d) 1;
+}

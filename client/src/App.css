@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* #root {
+  background-image: url('./assets/unused/bg-2.svg');
+}
+.dark #root {
+  background-image: url('./assets/unused/subtle-prism.svg');
+} */
